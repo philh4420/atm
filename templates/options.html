@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Options</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='options.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>ATM Options</h1>
+        <ul class="option-list">
+            <li>
+                <form action="/withdraw" method="get">
+                    <input type="hidden" name="account_number" value="{{ account_number }}">
+                    <button type="submit" class="option-button">Withdraw Cash</button>
+                </form>
+            </li>
+            <li>
+                <form action="/change_pin" method="get">
+                    <button type="submit" class="option-button">Change PIN</button>
+                </form>
+            </li>
+            <li>
+                <form action="/" method="get">
+                    <button type="submit" class="option-button">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
