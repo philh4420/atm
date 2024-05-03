@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session # type: ignore
 
 app = Flask(__name__)
 app.secret_key = 'e40e1abbe38492cd445589fe428be5b47e04588e08a29c57'
